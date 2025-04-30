@@ -15,7 +15,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> HUME_INFUSER = registerBlock(
             "hume_infuser",
-            properties -> new Block(properties),
+            HumeInfuser::new,
             BlockBehaviour.Properties.of());
 
 

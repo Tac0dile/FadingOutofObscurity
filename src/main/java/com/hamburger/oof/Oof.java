@@ -1,5 +1,6 @@
 package com.hamburger.oof;
 
+import com.hamburger.oof.world.item.ModCreativeTabs;
 import com.hamburger.oof.world.item.ModItems;
 import com.hamburger.oof.world.level.block.ModBlocks;
 import com.mojang.logging.LogUtils;
@@ -46,6 +47,8 @@ public class Oof {
         modEventBus.addListener(this::commonSetup);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModCreativeTabs.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         NeoForge.EVENT_BUS.register(this);

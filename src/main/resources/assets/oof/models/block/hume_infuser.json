@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "oof:block/hume_infuser"
+    "down": "oof:block/hume_infuser_bottom",
+    "east": "oof:block/hume_infuser_side",
+    "north": "oof:block/hume_infuser_north",
+    "particle": "minecraft:block/crafting_table_front",
+    "south": "oof:block/hume_infuser_south",
+    "up": "oof:block/hume_infuser_top",
+    "west": "oof:block/hume_infuser_side"
   }
 }
