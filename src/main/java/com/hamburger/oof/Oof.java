@@ -1,5 +1,8 @@
 package com.hamburger.oof;
 
+import com.hamburger.oof.world.item.ModCreativeTabs;
+import com.hamburger.oof.world.item.ModItems;
+import com.hamburger.oof.world.level.block.ModBlocks;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -42,7 +45,12 @@ public class Oof {
     public Oof(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
+        ModCreativeTabs.register(modEventBus);
+
+        modEventBus.addListener(this::addCreative);
         NeoForge.EVENT_BUS.register(this);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -55,6 +63,11 @@ public class Oof {
         LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
+    }
+
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+            event.accept(ModBlocks.HUME_INFUSER);
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
