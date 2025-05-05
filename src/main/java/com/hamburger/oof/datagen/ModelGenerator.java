@@ -25,9 +25,9 @@ public class ModelGenerator extends ModelProvider {
 
     public static final ModelTemplate MULTIFACE_TEMPLATE = new ModelTemplate(
             Optional.of(
-                    ModelLocationUtils.decorateBlockModelLocation("oof:hume_infuser_template")
+                    ModelLocationUtils.decorateBlockModelLocation("minecraft:cube")
             ),
-            Optional.of(""),
+            Optional.of("_model"),
             TextureSlot.NORTH,
             TextureSlot.SOUTH,
             TextureSlot.EAST,
@@ -50,6 +50,7 @@ public class ModelGenerator extends ModelProvider {
     @Override
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         itemModels.generateFlatItem(ModItems.CUP_OF_JOE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.VOID_RESONATOR.get(), ModelTemplates.FLAT_ITEM);
 
         blockModels.createTrivialBlock(ModBlocks.HUME_INFUSER.get(), MULTIFACE_PROVIDER);
 
