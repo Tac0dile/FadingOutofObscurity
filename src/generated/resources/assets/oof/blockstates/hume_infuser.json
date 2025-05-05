@@ -1,9 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "oof:block/hume_infuser",
-      "x": 90,
-      "y": 180
+      "model": "oof:block/hume_infuser_model"
     }
   }
 }

@@ -1,7 +1,6 @@
 package com.hamburger.oof.datagen;
 
 import com.hamburger.oof.Oof;
-import com.hamburger.oof.world.item.ModCreativeTabs;
 import com.hamburger.oof.world.item.ModItems;
 import com.hamburger.oof.world.level.block.ModBlocks;
 import net.minecraft.data.PackOutput;
