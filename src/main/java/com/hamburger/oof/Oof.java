@@ -1,5 +1,7 @@
 package com.hamburger.oof;
 
+import com.hamburger.oof.common.event.entity.ModItemEvents;
+import com.hamburger.oof.data.ModAttachments;
 import com.hamburger.oof.world.item.ModCreativeTabs;
 import com.hamburger.oof.world.item.ModItems;
 import com.hamburger.oof.world.level.block.ModBlocks;
@@ -50,8 +52,11 @@ public class Oof {
 
         ModCreativeTabs.register(modEventBus);
 
+        ModAttachments.register(modEventBus);
+
         modEventBus.addListener(this::addCreative);
         NeoForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.addListener(ModItemEvents::onItemPickup);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
