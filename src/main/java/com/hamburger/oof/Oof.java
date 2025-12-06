@@ -1,5 +1,6 @@
 package com.hamburger.oof;
 
+import com.hamburger.oof.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -44,6 +45,9 @@ public class Oof {
         modEventBus.addListener(this::commonSetup);
 
         NeoForge.EVENT_BUS.register(this);
+
+        ModItems.register(modEventBus);
+
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
