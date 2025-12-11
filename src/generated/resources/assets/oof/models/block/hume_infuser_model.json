@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "oof:block/hume_infuser_down",
+    "east": "oof:block/hume_infuser_east",
+    "north": "oof:block/hume_infuser_north",
+    "south": "oof:block/hume_infuser_south",
+    "up": "oof:block/hume_infuser_up",
+    "west": "oof:block/hume_infuser_west"
+  }
+}
