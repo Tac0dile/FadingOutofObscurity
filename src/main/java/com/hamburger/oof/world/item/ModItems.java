@@ -1,8 +1,14 @@
 package com.hamburger.oof.world.item;
 
 import com.hamburger.oof.Oof;
+import com.hamburger.oof.data.component.JoeRecord;
+import com.hamburger.oof.data.component.ModComponents;
 import com.hamburger.oof.world.item.anomalous_items.CupOfJoe;
 import com.hamburger.oof.world.item.utilities.VoidResonator;
+import net.minecraft.core.component.DataComponentType;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -18,10 +24,13 @@ public class ModItems {
     );
 
     //Items
-    public static final DeferredItem<Item> CUP_OF_JOE = ITEMS.registerItem(
+    public static final DeferredItem<Item> CUP_OF_JOE = ITEMS.register(
             "cup_of_joe",
-            CupOfJoe::new,
-            new Item.Properties().stacksTo(1)
+            resourceLocation -> new CupOfJoe(
+                    new Item.Properties()
+                            .setId(ResourceKey.create(Registries.ITEM, resourceLocation))
+                            .stacksTo(1)
+                            .component(ModComponents.JOE_ACTIVE_COMPONENT.get(), new JoeRecord(false)))
     );
 
 
