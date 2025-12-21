@@ -2,6 +2,8 @@ package com.hamburger.oof.world.item;
 
 import com.hamburger.oof.Oof;
 import com.hamburger.oof.world.item.anomalous_items.CupOfJoe;
+import com.hamburger.oof.world.item.anomalous_items.DiamondBrick;
+import com.hamburger.oof.world.item.anomalous_items.EvilWaterBotllef;
 import com.hamburger.oof.world.item.utilities.VoidResonator;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
@@ -22,6 +24,18 @@ public class ModItems {
             "cup_of_joe",
             CupOfJoe::new,
             new Item.Properties().stacksTo(1)
+    );
+
+    public static final DeferredItem<Item> EVIL_WATER_BOTLLEF = ITEMS.registerItem(
+            "evil_water_botllef",
+            EvilWaterBotllef::new,
+            new Item.Properties().stacksTo(1)
+    );
+
+    public static final DeferredItem<Item> DIAMOND_BRICK = ITEMS.registerItem(
+            "diamond_brick",
+            DiamondBrick::new,
+            new Item.Properties().stacksTo(64)
     );
 
 

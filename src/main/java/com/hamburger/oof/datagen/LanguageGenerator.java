@@ -15,6 +15,9 @@ public class LanguageGenerator extends LanguageProvider {
     protected void addTranslations() {
         this.addItem(ModItems.VOID_RESONATOR, "Void Resonator");
 
+        //Log of Anomalous Items
+        this.addItem(ModItems.DIAMOND_BRICK, "Diamond Brick");
+
         //SCPs
         this.addItem(ModItems.CUP_OF_JOE, "SCP-198");
 

@@ -1,19 +1,15 @@
 package com.hamburger.oof;
 
+import com.hamburger.oof.common.event.entity.ModItemEvents;
+import com.hamburger.oof.data.ModAttachments;
+import com.hamburger.oof.world.item.ModCreativeTabs;
+import com.hamburger.oof.world.item.ModItems;
+import com.hamburger.oof.world.level.block.ModBlocks;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -26,10 +22,6 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -42,8 +34,16 @@ public class Oof {
     public Oof(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
+        ModCreativeTabs.register(modEventBus);
+
+        ModAttachments.register(modEventBus);
+
+        modEventBus.addListener(this::addCreative);
         NeoForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.addListener(ModItemEvents::onItemPickup);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
@@ -55,6 +55,11 @@ public class Oof {
         LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
+    }
+
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+            event.accept(ModBlocks.HUME_INFUSER);
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

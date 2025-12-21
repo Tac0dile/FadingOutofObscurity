@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "oof:block/hume_infuser"
+    "model": "oof:item/void_resonator"
   }
 }

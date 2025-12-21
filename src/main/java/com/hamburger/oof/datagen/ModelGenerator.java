@@ -52,6 +52,8 @@ public class ModelGenerator extends ModelProvider {
         itemModels.generateFlatItem(ModItems.CUP_OF_JOE.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.VOID_RESONATOR.get(), ModelTemplates.FLAT_ITEM);
 
+        itemModels.generateFlatItem(ModItems.DIAMOND_BRICK.get(), ModelTemplates.FLAT_ITEM);
+
         blockModels.createTrivialBlock(ModBlocks.HUME_INFUSER.get(), MULTIFACE_PROVIDER);
 
 
