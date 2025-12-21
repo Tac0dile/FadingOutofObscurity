@@ -18,6 +18,11 @@ public class ModBlocks {
             HumeInfuser::new,
             BlockBehaviour.Properties.of());
 
+    public static final DeferredBlock<Block> BIG_RED_BUTTON = registerBlock(
+            "big_red_button",
+            BigRedButton::new,
+            BlockBehaviour.Properties.of());
+
 
     private static <B extends Block> DeferredBlock<B> registerBlock(String name, Function<BlockBehaviour.Properties, ? extends B> blockFactory, BlockBehaviour.Properties blockProperties) {
         DeferredBlock<B> block = BLOCKS.registerBlock(name, blockFactory, blockProperties);

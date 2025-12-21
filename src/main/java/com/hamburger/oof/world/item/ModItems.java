@@ -4,6 +4,8 @@ import com.hamburger.oof.Oof;
 import com.hamburger.oof.data.component.JoeRecord;
 import com.hamburger.oof.data.component.ModComponents;
 import com.hamburger.oof.world.item.anomalous_items.CupOfJoe;
+import com.hamburger.oof.world.item.anomalous_items.DiamondBrick;
+import com.hamburger.oof.world.item.anomalous_items.EvilWaterBotllef;
 import com.hamburger.oof.world.item.utilities.VoidResonator;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.component.DataComponents;
@@ -31,6 +33,18 @@ public class ModItems {
                             .setId(ResourceKey.create(Registries.ITEM, resourceLocation))
                             .stacksTo(1)
                             .component(ModComponents.JOE_ACTIVE_COMPONENT.get(), new JoeRecord(false)))
+    );
+
+    public static final DeferredItem<Item> EVIL_WATER_BOTLLEF = ITEMS.registerItem(
+            "evil_water_botllef",
+            EvilWaterBotllef::new,
+            new Item.Properties().stacksTo(1)
+    );
+
+    public static final DeferredItem<Item> DIAMOND_BRICK = ITEMS.registerItem(
+            "diamond_brick",
+            DiamondBrick::new,
+            new Item.Properties().stacksTo(64)
     );
 
 
