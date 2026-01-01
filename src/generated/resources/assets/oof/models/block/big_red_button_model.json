@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "oof:block/big_red_button_down",
+    "east": "oof:block/big_red_button_east",
+    "north": "oof:block/big_red_button_north",
+    "south": "oof:block/big_red_button_south",
+    "up": "oof:block/big_red_button_up",
+    "west": "oof:block/big_red_button_west"
+  }
+}
