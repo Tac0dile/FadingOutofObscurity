@@ -1,6 +1,6 @@
 package com.hamburger.oof.mixin;
 
-import com.hamburger.oof.data.component.ModComponents;
+import com.hamburger.oof.data.ModAttachments;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
@@ -21,6 +21,6 @@ public abstract class SlotMixin {
     @Overwrite
     public boolean mayPickup(Player player) {
         ItemStack itemStack = this.getItem();
-        return !itemStack.isEmpty() && itemStack.getComponents() == ModComponents.JOE_ACTIVE_COMPONENT && !player.isCreative() ? false : true;
+        return true;
     }
 }

@@ -50,11 +50,13 @@ public class ModelGenerator extends ModelProvider {
     @Override
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         itemModels.generateFlatItem(ModItems.CUP_OF_JOE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.EVIL_WATER_BOTLLEF.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.VOID_RESONATOR.get(), ModelTemplates.FLAT_ITEM);
 
         itemModels.generateFlatItem(ModItems.DIAMOND_BRICK.get(), ModelTemplates.FLAT_ITEM);
 
         blockModels.createTrivialBlock(ModBlocks.HUME_INFUSER.get(), MULTIFACE_PROVIDER);
+        blockModels.createTrivialBlock(ModBlocks.BIG_RED_BUTTON.get(), MULTIFACE_PROVIDER);
 
 
     }
