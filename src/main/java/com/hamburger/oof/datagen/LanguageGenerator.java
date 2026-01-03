@@ -22,5 +22,8 @@ public class LanguageGenerator extends LanguageProvider {
         this.addItem(ModItems.CUP_OF_JOE, "SCP-198");
 
         this.addBlock(ModBlocks.HUME_INFUSER, "Hume Infuser");
+
+        //OTHER
+        //Idk how to add the translation for the 001-J Reality Destruction :pensive:
     }
 }
