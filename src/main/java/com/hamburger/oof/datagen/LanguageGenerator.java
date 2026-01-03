@@ -27,5 +27,8 @@ public class LanguageGenerator extends LanguageProvider {
 
         this.addBlock(ModBlocks.BIG_RED_BUTTON, "The Big Red Button");
         this.addBlock(ModBlocks.HUME_INFUSER, "Hume Infuser");
+
+        //OTHER
+        //Idk how to add the translation for the 001-J Reality Destruction :pensive:
     }
 }

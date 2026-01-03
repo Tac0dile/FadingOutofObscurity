@@ -1,6 +1,8 @@
 package com.hamburger.oof.world.level.block;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -16,7 +18,8 @@ public class BigRedButton extends Block {
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (!level.isClientSide) {
-            player.hurt(player.damageSources().outOfBorder(), 400);
+            if (player instanceof ServerPlayer)
+                ((ServerPlayer) player).connection.disconnect(Component.literal("YOU DESTROYED REALITY"));
             System.out.println("DIEE!!!!!!");
         }
         return InteractionResult.SUCCESS;
