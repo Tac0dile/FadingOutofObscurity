@@ -19,7 +19,7 @@ public class BigRedButton extends Block {
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (!level.isClientSide) {
             if (player instanceof ServerPlayer)
-                ((ServerPlayer) player).connection.disconnect(Component.literal("YOU DESTROYED REALITY"));
+                ((ServerPlayer) player).connection.disconnect(Component.translatable("block.oof.big_red_disconnect"));
             System.out.println("DIEE!!!!!!");
         }
         return InteractionResult.SUCCESS;

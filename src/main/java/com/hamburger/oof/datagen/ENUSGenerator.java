@@ -6,13 +6,14 @@ import com.hamburger.oof.world.level.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
-public class LanguageGenerator extends LanguageProvider {
-    public LanguageGenerator(PackOutput output) {
+public class ENUSGenerator extends LanguageProvider {
+    public ENUSGenerator(PackOutput output) {
         super(output, Oof.MODID, "en_us");
     }
 
     @Override
     protected void addTranslations() {
+
         this.add("itemGroup.oof.equipment_blocks", "Equipment Blocks");
         this.add("itemGroup.oof.anomalous_items", "Anomalous Items");
 
@@ -28,7 +29,7 @@ public class LanguageGenerator extends LanguageProvider {
         this.addBlock(ModBlocks.BIG_RED_BUTTON, "The Big Red Button");
         this.addBlock(ModBlocks.HUME_INFUSER, "Hume Infuser");
 
-        //OTHER
-        //Idk how to add the translation for the 001-J Reality Destruction :pensive:
+        //UI Elements
+        this.add("block.oof.big_red_disconnect", "You destroyed everything.");
     }
 }

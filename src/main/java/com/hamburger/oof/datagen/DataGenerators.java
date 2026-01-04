@@ -10,7 +10,8 @@ public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent.Client event){
         event.createProvider(ModelGenerator::new);
-        event.createProvider(LanguageGenerator::new);
+        event.createProvider(ENUSGenerator::new);
+        event.createProvider(LOLGenerator::new);
     }
 
 }

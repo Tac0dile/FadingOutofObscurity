@@ -28,5 +28,8 @@ public class LOLGenerator extends LanguageProvider {
 
         this.addBlock(ModBlocks.BIG_RED_BUTTON, "PRES IT!");
         this.addBlock(ModBlocks.HUME_INFUSER, "Spooky Makr");
+
+        //UI Elements
+        this.add("block.oof.big_red_disconnect", "U presd teh big shinee red buton and kild all deh kittees :/");
     }
 }
