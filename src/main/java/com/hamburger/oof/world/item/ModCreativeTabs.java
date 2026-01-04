@@ -23,6 +23,9 @@ public class ModCreativeTabs {
                 output.accept(ModItems.VOID_RESONATOR);
                 output.accept(ModItems.DIAMOND_BRICK);
                 output.accept(ModBlocks.BIG_RED_BUTTON);
+
+                output.accept(ModBlocks.BIOLOGICAL_MOTHERBOARD);
+                output.accept(ModBlocks.STONE_TABLET);
             })
             .build()
     );
@@ -30,9 +33,6 @@ public class ModCreativeTabs {
     public static final Supplier<CreativeModeTab> EQUIPMENT_BLOCKS = CREATIVE_TAB.register("equipment_blocks", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup." + Oof.MODID + ".equipment_blocks"))
             .icon(() -> new ItemStack(ModBlocks.HUME_INFUSER.get()))
-            .displayItems((itemDisplayParameters, output) -> {
-                output.accept(ModBlocks.HUME_INFUSER);
-            })
             .build()
     );
 

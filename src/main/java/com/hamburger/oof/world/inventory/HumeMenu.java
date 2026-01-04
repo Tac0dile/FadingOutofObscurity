@@ -1,7 +1,6 @@
-package com.hamburger.oof.world.level.block;
+package com.hamburger.oof.world.inventory;
 
-import com.jcraft.jorbis.Block;
-import net.minecraft.world.entity.player.Inventory;
+import com.hamburger.oof.world.level.block.ModBlocks;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;

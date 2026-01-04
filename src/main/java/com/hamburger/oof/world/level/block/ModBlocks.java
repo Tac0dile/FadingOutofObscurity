@@ -23,6 +23,16 @@ public class ModBlocks {
             BigRedButton::new,
             BlockBehaviour.Properties.of());
 
+    public static final DeferredBlock<Block> BIOLOGICAL_MOTHERBOARD = registerBlock(
+            "biological_motherboard",
+            BiologicalMotherboard::new,
+            BlockBehaviour.Properties.of());
+
+    public static final DeferredBlock<Block> STONE_TABLET = registerBlock(
+            "stone_tablet",
+            StoneTablet::new,
+            BlockBehaviour.Properties.of());
+
 
     private static <B extends Block> DeferredBlock<B> registerBlock(String name, Function<BlockBehaviour.Properties, ? extends B> blockFactory, BlockBehaviour.Properties blockProperties) {
         DeferredBlock<B> block = BLOCKS.registerBlock(name, blockFactory, blockProperties);
