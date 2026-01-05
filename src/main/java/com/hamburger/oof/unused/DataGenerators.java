@@ -1,4 +1,4 @@
-package com.hamburger.oof.datagen;
+package com.hamburger.oof.unused;
 
 import com.hamburger.oof.Oof;
 import net.neoforged.bus.api.SubscribeEvent;

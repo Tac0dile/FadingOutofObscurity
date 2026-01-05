@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "motherboard=false": {
+      "model": "oof:block/stone_tablet_model"
+    },
+    "motherboard=true": {
+      "model": "oof:block/stone_tablet_full_model"
+    }
+  }
+}

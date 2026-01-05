@@ -26,12 +26,12 @@ public class ModBlocks {
     public static final DeferredBlock<Block> BIOLOGICAL_MOTHERBOARD = registerBlock(
             "biological_motherboard",
             BiologicalMotherboard::new,
-            BlockBehaviour.Properties.of());
+            BlockBehaviour.Properties.of().noOcclusion().noCollission());
 
     public static final DeferredBlock<Block> STONE_TABLET = registerBlock(
             "stone_tablet",
             StoneTablet::new,
-            BlockBehaviour.Properties.of());
+            BlockBehaviour.Properties.of().noOcclusion());
 
 
     private static <B extends Block> DeferredBlock<B> registerBlock(String name, Function<BlockBehaviour.Properties, ? extends B> blockFactory, BlockBehaviour.Properties blockProperties) {
