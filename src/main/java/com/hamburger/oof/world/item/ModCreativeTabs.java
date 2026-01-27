@@ -18,14 +18,13 @@ public class ModCreativeTabs {
             .title(Component.translatable("itemGroup." + Oof.MODID + ".anomalous_items"))
             .icon(() -> new ItemStack(ModItems.CUP_OF_JOE.get()))
             .displayItems((params, output) -> {
+                output.accept(ModBlocks.BIOLOGICAL_MOTHERBOARD);
+                output.accept(ModBlocks.STONE_TABLET);
                 output.accept(ModItems.CUP_OF_JOE);
                 output.accept(ModItems.EVIL_WATER_BOTLLEF);
                 output.accept(ModItems.VOID_RESONATOR);
                 output.accept(ModItems.DIAMOND_BRICK);
                 output.accept(ModBlocks.BIG_RED_BUTTON);
-
-                output.accept(ModBlocks.BIOLOGICAL_MOTHERBOARD);
-                output.accept(ModBlocks.STONE_TABLET);
             })
             .build()
     );

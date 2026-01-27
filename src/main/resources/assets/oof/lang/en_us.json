@@ -2,10 +2,19 @@
   "block.oof.big_red_button": "The Big Red Button",
   "block.oof.big_red_disconnect": "You destroyed everything.",
   "block.oof.hume_infuser": "Hume Infuser",
-  "item.oof.cup_of_joe": "SCP-198",
+  "block.oof.biological_motherboard": "Biological Motherboard",
+  "block.oof.stone_tablet": "Stone Tablet",
+  "item.oof.cup_of_joe": "Cup of Joe",
   "item.oof.diamond_brick": "Diamond Brick",
   "item.oof.evil_water_botllef": "Evil :(",
   "item.oof.void_resonator": "Void Resonator",
   "itemGroup.oof.anomalous_items": "Anomalous Items",
-  "itemGroup.oof.equipment_blocks": "Equipment Blocks"
+  "itemGroup.oof.equipment_blocks": "Equipment Blocks",
+
+
+  "tooltip.oof.big_red_button": "§4§oSCP-001-J | Keter",
+  "tooltip.oof.evil_water_botllef": "§c§oSCP-021-J | Dangorus",
+  "tooltip.oof.biological_motherboard": "§e§oSCP-003-1 | Euclid",
+  "tooltip.oof.stone_tablet": "§1§oSCP-003-2 | Thaumiel",
+  "tooltip.oof.cup_of_joe": "§e§oSCP-198 | Euclid"
 }
