@@ -29,52 +29,14 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import java.util.List;
 
 public class StoneTablet extends Block {
-    public static final EnumProperty<Direction> FACING = HorizontalDirectionalBlock.FACING;
-    public static final BooleanProperty MOTHERBOARD = ModBlockStateProperties.MOTHERBOARD;
-    private static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 8, 16);
 
     public StoneTablet(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(MOTHERBOARD, false));
+        this.registerDefaultState(this.defaultBlockState());
     }
 
-    @Override
-    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        boolean isOccupied = state.getValue(MOTHERBOARD);
-        if (!level.isClientSide) {
-            if (stack.is(ModBlocks.BIOLOGICAL_MOTHERBOARD.asItem())) {
-                if (!state.getValue(MOTHERBOARD)) {
-                    level.setBlock(pos, state.setValue(MOTHERBOARD, isOccupied = true), 3);
-                    level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, state));
-                    stack.consume(1, player);
-                    return InteractionResult.SUCCESS;
-                }
-            }
-            else {
-                if(state.getValue(MOTHERBOARD)) {
-                    level.setBlock(pos, state.setValue(MOTHERBOARD, isOccupied = false), 3);
-                    level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, state));
-                    player.getInventory().add(ModBlocks.BIOLOGICAL_MOTHERBOARD.toStack());
-                    return InteractionResult.SUCCESS;
-                }
-            }
-        }
-        return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
-    }
-
-    @Override
-    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return SHAPE;
-    }
-
-    @Override
-    protected VoxelShape getVisualShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return Shapes.empty();
-    }
-
-    @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, MOTHERBOARD);
+    protected BlockState getBlockStateDefinition() {
+        return this.defaultBlockState();
     }
 
     @Override

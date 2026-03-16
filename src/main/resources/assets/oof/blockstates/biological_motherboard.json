@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "oof:block/biological_motherboard_model"
+      "model": "oof:block/biological_motherboard"
     }
   }
 }

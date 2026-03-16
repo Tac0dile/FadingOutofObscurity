@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "oof:block/hume_infuser_model"
+      "model": "oof:block/hume_infuser"
     }
   }
 }
