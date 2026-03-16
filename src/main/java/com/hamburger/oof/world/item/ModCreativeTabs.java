@@ -18,6 +18,8 @@ public class ModCreativeTabs {
             .title(Component.translatable("itemGroup." + Oof.MODID + ".anomalous_items"))
             .icon(() -> new ItemStack(ModItems.CUP_OF_JOE.get()))
             .displayItems((params, output) -> {
+                output.accept(ModBlocks.BIOLOGICAL_MOTHERBOARD);
+                output.accept(ModBlocks.STONE_TABLET);
                 output.accept(ModItems.CUP_OF_JOE);
                 output.accept(ModItems.EVIL_WATER_BOTLLEF);
                 output.accept(ModItems.VOID_RESONATOR);
@@ -30,9 +32,6 @@ public class ModCreativeTabs {
     public static final Supplier<CreativeModeTab> EQUIPMENT_BLOCKS = CREATIVE_TAB.register("equipment_blocks", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup." + Oof.MODID + ".equipment_blocks"))
             .icon(() -> new ItemStack(ModBlocks.HUME_INFUSER.get()))
-            .displayItems((itemDisplayParameters, output) -> {
-                output.accept(ModBlocks.HUME_INFUSER);
-            })
             .build()
     );
 

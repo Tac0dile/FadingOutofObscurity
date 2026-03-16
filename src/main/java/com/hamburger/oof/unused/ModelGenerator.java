@@ -1,4 +1,4 @@
-package com.hamburger.oof.datagen;
+package com.hamburger.oof.unused;
 
 import com.hamburger.oof.Oof;
 import com.hamburger.oof.world.item.ModItems;
@@ -6,15 +6,9 @@ import com.hamburger.oof.world.level.block.ModBlocks;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
-import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
-import net.minecraft.client.data.models.blockstates.Variant;
-import net.minecraft.client.data.models.blockstates.VariantProperties;
 import net.minecraft.client.data.models.model.*;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.neoforged.fml.common.Mod;
 
 import java.util.Optional;
 

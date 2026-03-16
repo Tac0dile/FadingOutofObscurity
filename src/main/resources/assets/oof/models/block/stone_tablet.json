@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "oof:block/stone_tablet_bottom",
+    "east": "oof:block/stone_tablet_side",
+    "north": "oof:block/stone_tablet_side",
+    "south": "oof:block/stone_tablet_side",
+    "up": "oof:block/stone_tablet_top",
+    "west": "oof:block/stone_tablet_side",
+    "particle": "oof:block/stone_tablet_bottom"
+  }
+}

@@ -1,5 +1,6 @@
 package com.hamburger.oof.world.level.block;
 
+import com.hamburger.oof.world.inventory.HumeMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
@@ -11,8 +12,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-
-import java.awt.*;
 
 public class HumeInfuser extends Block {
     public static final Component CONTAINER_TITLE = Component.translatable("container.crafting");
