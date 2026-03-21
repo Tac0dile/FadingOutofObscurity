@@ -20,6 +20,7 @@ public class ModCreativeTabs {
             .displayItems((params, output) -> {
                 output.accept(ModBlocks.BIOLOGICAL_MOTHERBOARD);
                 output.accept(ModBlocks.STONE_TABLET);
+                output.accept(ModBlocks.BIOLOGICAL_BIPRODUCT);
                 output.accept(ModItems.CUP_OF_JOE);
                 output.accept(ModItems.EVIL_WATER_BOTLLEF);
                 output.accept(ModItems.VOID_RESONATOR);
